@@ -1,0 +1,21 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "html.format.indentHandlebars": true,
+        "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+        "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+        "files.trimTrailingWhitespace": true,
+        "eslint.autoFixOnSave": true,
+        "editor.formatOnSave": true,
+        "workbench.colorCustomizations": {
+            "activityBar.background": "#291f16",
+            "activityBar.foreground": "#00d01f",
+            "titleBar.activeBackground": "#07bf23a7",
+            "titleBar.activeForeground": "#000000"
+        }
+    }
+}
