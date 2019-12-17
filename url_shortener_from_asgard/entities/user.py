@@ -29,6 +29,9 @@ class User(BaseEntity):
     @staticmethod
     def create_new():
         user = User()
+        if user._document.get("_id"):
+            user._document.pop("_id")
+
         insert_user(user)
 
         return user
