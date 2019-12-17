@@ -1,4 +1,4 @@
-#!/Users/nick/Desktop/nick_cunningham/git/urlShortenerFromAsgard_server/venv/bin/python
+#!/Users/nick/Desktop/nick_cunningham/git/url-shortener-from-asgard-server/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

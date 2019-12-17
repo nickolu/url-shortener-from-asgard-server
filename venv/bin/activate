@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/nick/Desktop/nick_cunningham/git/urlShortener_server/venv"
+VIRTUAL_ENV="/Users/nick/Desktop/nick_cunningham/git/urlShortenerFromAsgard_server/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
