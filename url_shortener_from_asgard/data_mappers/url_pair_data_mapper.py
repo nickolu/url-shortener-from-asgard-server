@@ -1,5 +1,7 @@
-from .mongo_data_mapper import MongoDbDataMapper
-from .in_memory_data_mapper import InMemoryDataMapper
+from url_shortener_from_asgard.data_mappers.mongo_data_mapper import MongoDbDataMapper
+from url_shortener_from_asgard.data_mappers.in_memory_data_mapper import (
+    InMemoryDataMapper,
+)
 
 
 class UrlPairMongoDbDataMapper(MongoDbDataMapper):

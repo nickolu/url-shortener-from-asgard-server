@@ -1,6 +1,6 @@
 from pymongo import MongoClient
-from .. import settings
-from .data_mapper import DataMapper
+from url_shortener_from_asgard import settings
+from url_shortener_from_asgard.data_mappers.data_mapper import DataMapper
 
 client = MongoClient("localhost", settings.MONGO_PORT)
 db = client["urlShortenerFromAsgard"]

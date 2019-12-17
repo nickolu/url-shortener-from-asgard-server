@@ -1,8 +1,13 @@
-import random
 import json
-from .base import BaseEntity
-from .available_words_for_source import AvailableWordsForSource
-from ..data_mappers.data_mapper_registry import DataMapperRegistry
+import random
+
+from url_shortener_from_asgard.data_mappers.data_mapper_registry import (
+    DataMapperRegistry,
+)
+from url_shortener_from_asgard.entities.available_words_for_source import (
+    AvailableWordsForSource,
+)
+from url_shortener_from_asgard.entities.base import BaseEntity
 
 MAX_NUMBER_OF_USES_PER_URL = 10
 

@@ -2,8 +2,10 @@ import json
 
 from bson import ObjectId
 
-from ..data_mappers.data_mapper_registry import DataMapperRegistry
-from .base import BaseEntity
+from url_shortener_from_asgard.data_mappers.data_mapper_registry import (
+    DataMapperRegistry,
+)
+from url_shortener_from_asgard.entities.base import BaseEntity
 
 
 def get_user_by_id(user_id):

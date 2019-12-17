@@ -1,16 +1,22 @@
-from __future__ import absolute_import, unicode_literals
-
 import logging
 
-from .url_pair_data_mapper import UrlPairMongoDbDataMapper
-from .user_data_mapper import UserMongoDbDataMapper
-from .data_mapper_registry import DataMapperRegistry
-from .available_words_for_source_data_mapper import (
+from url_shortener_from_asgard.data_mappers.url_pair_data_mapper import (
+    UrlPairMongoDbDataMapper,
+)
+from url_shortener_from_asgard.data_mappers.user_data_mapper import (
+    UserMongoDbDataMapper,
+)
+from url_shortener_from_asgard.data_mappers.data_mapper_registry import (
+    DataMapperRegistry,
+)
+from url_shortener_from_asgard.data_mappers.available_words_for_source_data_mapper import (
     AvailableWordsForSourceMongoDbDataMapper,
 )
-from ..entities.available_words_for_source import AvailableWordsForSource
-from ..entities.url_pair import UrlPair
-from ..entities.user import User
+from url_shortener_from_asgard.entities.available_words_for_source import (
+    AvailableWordsForSource,
+)
+from url_shortener_from_asgard.entities.url_pair import UrlPair
+from url_shortener_from_asgard.entities.user import User
 
 logger = logging.getLogger(__name__)
 

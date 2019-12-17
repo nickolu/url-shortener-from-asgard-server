@@ -1,5 +1,8 @@
-from .base import BaseEntity
-from ..data_mappers.data_mapper_registry import DataMapperRegistry
+from url_shortener_from_asgard.entities.base import BaseEntity
+from url_shortener_from_asgard.data_mappers.data_mapper_registry import (
+    DataMapperRegistry,
+)
+
 
 
 def get_random_available_word(source):

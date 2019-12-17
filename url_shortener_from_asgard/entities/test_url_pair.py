@@ -1,15 +1,23 @@
 import unittest
 from unittest import TestCase
 
-from data_mappers.data_mapper_registry import DataMapperRegistry
-from data_mappers.url_pair_data_mapper import UrlPairInMemoryDataMapper
-from data_mappers.user_data_mapper import UserInMemoryDataMapper
-from data_mappers.available_words_for_source_data_mapper import (
+from url_shortener_from_asgard.data_mappers.data_mapper_registry import (
+    DataMapperRegistry,
+)
+from url_shortener_from_asgard.data_mappers.url_pair_data_mapper import (
+    UrlPairInMemoryDataMapper,
+)
+from url_shortener_from_asgard.data_mappers.user_data_mapper import (
+    UserInMemoryDataMapper,
+)
+from url_shortener_from_asgard.data_mappers.available_words_for_source_data_mapper import (
     AvailableWordsForSourceInMemoryDataMapper,
 )
-from .available_words_for_source import AvailableWordsForSource
-from .url_pair import UrlPair
-from .user import User
+from url_shortener_from_asgard.entities.available_words_for_source import (
+    AvailableWordsForSource,
+)
+from url_shortener_from_asgard.entities.url_pair import UrlPair
+from url_shortener_from_asgard.entities.user import User
 
 
 class TestDemo(TestCase):

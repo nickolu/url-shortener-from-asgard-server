@@ -1,4 +1,4 @@
-from .data_mapper import DataMapper
+from url_shortener_from_asgard.data_mappers.data_mapper import DataMapper
 
 
 class InMemoryDataMapper(DataMapper):

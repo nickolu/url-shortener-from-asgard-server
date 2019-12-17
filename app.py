@@ -1,12 +1,15 @@
-from .data_mappers.configure_registry import configure_data_mapper_registry
-from .entities.url_pair import (
-    UrlPair,
-    get_url_pair_by_short_url,
-    get_url_pair_by_long_url,
-)
-from .entities.user import User
-from flask import Flask, request, redirect, url_for
+from flask import Flask, redirect, request, url_for
+
 from flask_cors import CORS
+from url_shortener_from_asgard.data_mappers.configure_registry import (
+    configure_data_mapper_registry,
+)
+from url_shortener_from_asgard.entities.url_pair import (
+    UrlPair,
+    get_url_pair_by_long_url,
+    get_url_pair_by_short_url,
+)
+from url_shortener_from_asgard.entities.user import User
 
 app = Flask(__name__)
 CORS(app)
@@ -72,4 +75,3 @@ def dynamic_redirect(short_url):
 
 def error_response(message, status):
     return {"error": {"message": message, "status": status}}
-
