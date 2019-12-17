@@ -33,7 +33,8 @@ class AvailableWordsForSourceMongoDbDataMapper(MongoDbDataMapper):
 
 
 class AvailableWordsForSourceInMemoryDataMapper(InMemoryDataMapper):
-    pass
+    def get_random_available_asgardian_word(self):
+        return "random-word"
 
 
 class NoWordsRemainingInSourceError(Exception):

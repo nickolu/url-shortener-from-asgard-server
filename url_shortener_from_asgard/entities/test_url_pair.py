@@ -20,11 +20,6 @@ from url_shortener_from_asgard.entities.url_pair import UrlPair
 from url_shortener_from_asgard.entities.user import User
 
 
-class TestDemo(TestCase):
-    def test_nothing(self):
-        assert True
-
-
 class TestUrlPair(TestCase):
     def setUp(self):
         self.url_pair_data_mapper = UrlPairInMemoryDataMapper()
@@ -39,11 +34,18 @@ class TestUrlPair(TestCase):
             AvailableWordsForSource, self.available_words_for_source_data_mapper
         )
 
-    def test_should_create_new_url_pair(self):
+    def test_url_pair_should_have_short_url_string(self):
         user = User.create_new()
-        UrlPair.create_new("https://www.google.com", user)
+        url_pair = UrlPair.create_new("https://www.google.com", user)
 
-        assert True
+        assert isinstance(url_pair._document["short_url"], str)
+
+    def test_url_pair_should_have_long_url_equal_to_original_url(self):
+        user = User.create_new()
+        original_url = "https://www.google.com"
+        url_pair = UrlPair.create_new(original_url, user)
+
+        assert url_pair._document["long_url"] == original_url
 
 
 if __name__ == "__main__":

@@ -14,6 +14,9 @@ class InMemoryDataMapper(DataMapper):
         next_id = self._current_id = self._current_id + 1
         return next_id
 
+    def create_new(self, entity):
+        entity._document["_id"] = self.get_next_id
+
     def insert(self, entity):
         self._data_store[entity.id] = self._create_copy_of_entity(entity)
 

@@ -4,8 +4,6 @@ APP := app.py
 test: 
 	python3 -m unittest
 
-activate: 
-	. $(ROOT_DIR)/venv/bin/activate
-
 run:
+	. venv/bin/activate
 	FLASK_APP=$(APP) flask run 

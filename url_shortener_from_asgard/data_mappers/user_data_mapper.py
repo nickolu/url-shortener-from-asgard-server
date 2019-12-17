@@ -20,6 +20,6 @@ class UserMongoDbDataMapper(MongoDbDataMapper):
 
 class UserInMemoryDataMapper(InMemoryDataMapper):
     def create_user(self, user):
+        self.create_new(user)
         self.insert(user)
 
-    pass
