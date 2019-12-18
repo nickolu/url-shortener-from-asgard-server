@@ -2,9 +2,8 @@
 
 Rest API for URL Shortener from Asgard
 
-This is a demo project. The world probably expected me to generate a string of n random characters to use for the shortened URLs. I say, why do that when bit.ly exists and so many other services. Its not hard to do so don't judge me for not doing it. I did something vastly more cool, however less useful. With my app, you can harness the power of the Norse gods, can bit.ly do that? I don't think so.
+This is a demo project. With this you can both shorten a URL and harness the power of norse mythology.
 
-Let this also be a lesson in vague requirements.
 
 ## Info
 
