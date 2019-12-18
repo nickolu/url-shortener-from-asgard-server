@@ -4,7 +4,6 @@ Rest API for URL Shortener from Asgard
 
 This is a demo project. With this you can both shorten a URL and harness the power of norse mythology.
 
-
 ## Info
 
 To run this you need to have mongo running on port 27017 with the database set up.
@@ -32,6 +31,10 @@ should work `¯\_(ツ)_/¯`
 After doing that, activate the virtual environment:
 
 `source venv/bin/activate`
+
+Install dependencies
+
+`pip install -r requirements.txt`
 
 Then, start the app:
 
