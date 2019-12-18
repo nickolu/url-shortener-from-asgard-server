@@ -39,13 +39,9 @@ def get_url_pair_by_long_url(shortUrl):
 
     return None
 
-
 def get_all_url_pairs_for_user(user_id):
     url_pair_data_mapper = DataMapperRegistry.get(UrlPair)
     documents = url_pair_data_mapper.get_by_user_id(user_id)
-
-    print("DOCUMENTS!!!!")
-    print(documents)
 
     return documents
 

@@ -47,7 +47,7 @@ def get_all_urls_for_user():
     user_id = request.args.get("user_id")
     url_pairs = UrlPair.get_url_pairs_by_user(user_id)
     url_pairs_json_response = [
-        [url_pair["short_url"], url_pair["long_url"]]
+        [url_pair["short_url"], url_pair["long_url"], url_pair["times_accessed"]]
         for url_pair in url_pairs.collection.find()
     ]
 
