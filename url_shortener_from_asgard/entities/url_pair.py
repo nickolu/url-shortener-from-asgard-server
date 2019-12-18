@@ -13,11 +13,7 @@ MAX_NUMBER_OF_USES_PER_URL = 10
 
 
 def get_random_available_asgardian_word():
-    available_words_for_source_data_mapper = DataMapperRegistry.get(
-        AvailableWordsForSource
-    )
-
-    return available_words_for_source_data_mapper.get_random_available_asgardian_word()
+    return AvailableWordsForSource.get_random_available_asgardian_word()
 
 
 def get_url_pair_by_short_url(shortUrl):
@@ -38,6 +34,7 @@ def get_url_pair_by_long_url(shortUrl):
         return UrlPair(document)
 
     return None
+
 
 def get_all_url_pairs_for_user(user_id):
     url_pair_data_mapper = DataMapperRegistry.get(UrlPair)

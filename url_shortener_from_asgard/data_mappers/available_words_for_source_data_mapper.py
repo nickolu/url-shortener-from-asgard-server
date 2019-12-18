@@ -31,6 +31,11 @@ class AvailableWordsForSourceMongoDbDataMapper(MongoDbDataMapper):
     def get_random_available_asgardian_word(self):
         return self.get_random_available_word_from_source("asgard")
 
+    def get_available_words_count(self):
+        available_words_from_source = self.collection.find_one({"source": "asgard"})
+        available_words = available_words_from_source["available_words"]
+        return len(available_words)
+
 
 class AvailableWordsForSourceInMemoryDataMapper(InMemoryDataMapper):
     def get_random_available_asgardian_word(self):

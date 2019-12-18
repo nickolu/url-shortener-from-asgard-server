@@ -10,6 +10,9 @@ from url_shortener_from_asgard.entities.url_pair import (
     get_url_pair_by_short_url,
 )
 from url_shortener_from_asgard.entities.user import User
+from url_shortener_from_asgard.entities.available_words_for_source import (
+    AvailableWordsForSource,
+)
 
 app = Flask(__name__)
 CORS(app)
@@ -52,6 +55,11 @@ def get_all_urls_for_user():
     ]
 
     return {"userId": user_id, "savedUrls": url_pairs_json_response}
+
+
+@app.route("/get-remaining-asgardian-words-count")
+def get_remaining_available_words_count():
+    return {"remaining": AvailableWordsForSource.get_remaining_asgardian_words_count()}
 
 
 @app.route("/<short_url>")
